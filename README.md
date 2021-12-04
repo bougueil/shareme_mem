@@ -13,7 +13,7 @@ A super easy access to memory, shared by all processes.
 
 def deps do
   [
-    {:shareme_mem, "~> 0.1.0"}
+     {:shareme_mem, git: "git://github.com/bougueil/shareme_mem"}
   ]
 end
 ```
