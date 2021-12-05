@@ -1,10 +1,6 @@
 defmodule ShareMe.Mem.Test do
   use ExUnit.Case
 
-  def clean_jop_files(bank) do
-    for file <- Path.wildcard("jop_#{bank}*.gz"), do: File.rm!(file)
-  end
-
   test "1 process" do
     data = %{a: 112}
     ShareMe.Mem.put("thekey", data)
