@@ -9,8 +9,8 @@ defmodule ShareMe.Mem.Test do
 
   test "2 processes" do
     data = %{a: 112}
-    task = Task.async(fn -> ShareMe.Mem.put("thekey", data) end)
-    Task.await(task)
+    Task.async(fn -> ShareMe.Mem.put("thekey", data) end)
+    |> Task.await()
     assert data == ShareMe.Mem.get("thekey")
   end
 end
